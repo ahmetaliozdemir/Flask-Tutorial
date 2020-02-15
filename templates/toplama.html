@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplama</title>
+</head>
+<body>
+{% if total %}
+    <h3>Sonuç <span>{{ total }}</span></h3> 
+{% else %}
+    <p>Bu bir get requesti veya request olmayabilir.</p>
+{% endif %}
+</body>
+</html>
