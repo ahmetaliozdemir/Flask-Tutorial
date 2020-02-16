@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/<icerikurl>")
+def icerik(icerikurl=None):
+    return render_template("icerik.html",icerikurl=icerikurl)
+
 @app.route("/sayfa/<sayfaadi>")
 def sayfa(sayfaadi=None):
     iyazi = "<h1>İçerik Yazı</h1>"
