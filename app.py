@@ -10,6 +10,10 @@ def index():
 def icerik(icerikurl=None):
     return render_template("icerik.html",icerikurl=icerikurl)
 
+@app.route("/<konu>/<icerikurl>")
+def konu(icerikurl=None,konu=None):
+    return render_template("icerik.html",icerikurl=icerikurl,konu=konu)
+
 @app.route("/sayfa/<sayfaadi>")
 def sayfa(sayfaadi=None):
     iyazi = "<h1>İçerik Yazı</h1>"
